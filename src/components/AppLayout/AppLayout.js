@@ -59,6 +59,7 @@ class AppLayout extends React.Component {
 
   render() {
     console.log(this.state);
+    console.log('render app layout');
     return (
       <Wrapper>
         <AppHeader
@@ -68,9 +69,7 @@ class AppLayout extends React.Component {
         >
         </AppHeader>
         <BodyWrapper>
-          <SidebarMenu isOpen={this.state.isSidebarOpen}>
-                        Sidebar
-          </SidebarMenu>
+          <SidebarMenu isOpen={this.state.isSidebarOpen} />
           <MainContent isOpen={this.state.isSidebarOpen}>
             <AppBreadcrumb />
             <ContainerFluid fluid>

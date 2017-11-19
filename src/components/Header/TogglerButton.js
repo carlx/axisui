@@ -4,7 +4,6 @@ import { Button, Icon } from 'semantic-ui-react';
 import Toggler from './Toggler';
 import { HEADER_FONT_COLOR } from '../StyleUtils/constants';
 
-
 const StyledButton = styled(Button)`
   color: ${HEADER_FONT_COLOR} !important;
   font-weight: bold !important;
