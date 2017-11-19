@@ -4,34 +4,30 @@ import { Icon } from 'semantic-ui-react';
 import { MenuAccordion, MenuAccordionTitle, MenuAccordionContent, TitleWrapper, Title, TitleIcon, TitleDropDownIcon } from '../MenuAccordion';
 
 
-class ItemsContainer extends React.Component {
-  render() {
-    return (
-      <MenuAccordion styled>
-        <MenuAccordionTitle
-          index={this.props.index}
-          active={this.props.activeIndex === this.props.index}
-          onClick={this.props.handleClick}
-        >
-          <TitleWrapper>
-            <TitleIcon>
-              {this.props.icon && <Icon name={this.props.icon} />}
-            </TitleIcon>
-            <Title>
-              {this.props.title}
-            </Title>
-            <TitleDropDownIcon>
-              <Icon name="dropdown" />
-            </TitleDropDownIcon>
-          </TitleWrapper>
-        </MenuAccordionTitle>
-        <MenuAccordionContent active={this.props.activeIndex === this.props.index}>
-          {this.props.children}
-        </MenuAccordionContent>
-      </MenuAccordion>
-    );
-  }
-}
+const ItemsContainer = (props) => (
+  <MenuAccordion styled>
+    <MenuAccordionTitle
+      index={props.index}
+      active={props.activeIndex === props.index}
+      onClick={props.handleClick}
+    >
+      <TitleWrapper>
+        <TitleIcon>
+          {props.icon && <Icon name={props.icon} />}
+        </TitleIcon>
+        <Title>
+          {props.title}
+        </Title>
+        <TitleDropDownIcon>
+          <Icon name="dropdown" />
+        </TitleDropDownIcon>
+      </TitleWrapper>
+    </MenuAccordionTitle>
+    <MenuAccordionContent active={props.activeIndex === props.index}>
+      {props.children}
+    </MenuAccordionContent>
+  </MenuAccordion>
+);
 
 ItemsContainer.PropTypes = {
   index: PropTypes.number.isRequired,

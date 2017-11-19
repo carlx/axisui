@@ -11,7 +11,6 @@ const setShrink = (isOpen) => {
 const MainContent = styled.div`
   background-color: transparent;
   flex: 1 1 auto;
-  padding: 10px 10px 10px 10px;
   animation-duration: 0.5s;
   animation-fill-mode: both;
   @keyframes fadeOutLeftMainContent {

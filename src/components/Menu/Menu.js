@@ -18,7 +18,7 @@ class Menu extends Component {
   }
 
   renderChildren = (children) => children.map(
-    (item) => <Item title={item.name} key={item.name} icon={item.icon} />
+    (item) => <Item title={item.name} key={item.id} icon={item.icon} />
   )
 
   render() {
@@ -29,7 +29,7 @@ class Menu extends Component {
             if (item.hasOwnProperty('children')) {
               return (<ItemsContainer
                 title={item.name}
-                key={item.name + index}
+                key={item.id}
                 index={index}
                 icon={item.icon}
                 activeIndex={this.state.activeIndex}
@@ -38,7 +38,7 @@ class Menu extends Component {
                 {this.renderChildren(item.children)}
               </ItemsContainer>);
             }
-            return <Item title={item.name} hasBorderBottom={true} icon={item.icon} key={item.name + index} />;
+            return <Item title={item.name} icon={item.icon} key={item.id} />;
           })
         }
       </section>

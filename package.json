@@ -1,6 +1,6 @@
 {
-  "name": "electron",
-  "version": "0.1.0",
+  "name": "AxisUI",
+  "version": "1.0.1",
   "license": "MIT",
   "scripts": {
     "start": "razzle start",

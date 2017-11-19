@@ -11,7 +11,7 @@ class AppLogo extends React.Component {
             avatar verticalAlign="middle" spaced="right" height="25" width="25" size="mini"
             src="https://cdn.worldvectorlogo.com/logos/react.svg"
           />
-          <strong>ELECTRON UI</strong>
+          <strong>AXIS UI</strong>
         </Item>
       </Logo>
     );
