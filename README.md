@@ -1,3 +1,3 @@
-ELECTRON UI
+AXIS UI
 
 yarn start - to lunch ui

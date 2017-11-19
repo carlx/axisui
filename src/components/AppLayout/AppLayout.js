@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Container } from 'semantic-ui-react';
 import Wrapper from '../Wrapper/Wrapper';
 import AppHeader from '../Header/AppHeader';
 import BodyWrapper from '../BodyWrapper/BodyWrapper';
 import SidebarMenu from '../Sidebar/SidebarMenu';
 import MainContent from '../MainContent/MainContent';
-import BreadCrumb from '../BreadCrumb/BreadCrumb';
+import ContainerFluid from '../ContainerFluid/ContainerFluid';
+import AppBreadcrumb from '../Breadcrumb/AppBreadcrumb';
 import { MOBILE, DESKTOP } from '../StyleUtils/style-utils';
 
 
@@ -72,10 +72,10 @@ class AppLayout extends React.Component {
                         Sidebar
           </SidebarMenu>
           <MainContent isOpen={this.state.isSidebarOpen}>
-            <BreadCrumb />
-            <Container fluid>
+            <AppBreadcrumb />
+            <ContainerFluid fluid>
               {this.props.children}
-            </Container>
+            </ContainerFluid>
           </MainContent>
         </BodyWrapper>
       </Wrapper>
