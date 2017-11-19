@@ -1,31 +1,36 @@
 import React, { Component } from 'react';
-import logo from './react.svg';
 import './Home.css';
+import 'semantic-ui-css/semantic.min.css';
+import { Grid, Image } from 'semantic-ui-react'
+import AppLayout from './components/AppLayout/AppLayout';
 
 class Home extends Component {
   render() {
     return (
-      <div className="Home">
-        <div className="Home-header">
-          <img src={logo} className="Home-logo" alt="logo" />
-          <h2>Welcome to Razzle</h2>
-        </div>
-        <p className="Home-intro">
-          To get started, edit <code>src/App.js</code> or{' '}
-          <code>src/Home.js</code> and save to reload.
-        </p>
-        <ul className="Home-resources">
-          <li>
-            <a href="https://github.com/jaredpalmer/razzle">Docs</a>
-          </li>
-          <li>
-            <a href="https://github.com/jaredpalmer/razzle/issues">Issues</a>
-          </li>
-          <li>
-            <a href="https://palmer.chat">Community Slack</a>
-          </li>
-        </ul>
-      </div>
+      <AppLayout>
+          <Grid celled>
+              <Grid.Row>
+                  <Grid.Column width={3}>
+                      Lorem Ipsum jest tekstem stosowanym jako przykładowy wypełniacz w przemyśle poligraficznym. Został po raz pierwszy użyty w XV w. przez nieznanego drukarza do wypełnienia tekstem próbnej książki. Pięć wieków później zaczął być używany przemyśle elektronicznym, pozostając praktycznie niezmienionym. Spopularyzował się w latach 60. XX w. wraz z publikacją arkuszy Letrasetu, zawierających fragmenty Lorem Ipsum, a ostatnio z zawierającym różne wersje Lorem Ipsum oprogramowaniem przeznaczonym do realizacji druków na komputerach osobistych, jak Aldus PageMaker
+                  </Grid.Column>
+                  <Grid.Column width={13}>
+                      Lorem Ipsum jest tekstem stosowanym jako przykładowy wypełniacz w przemyśle poligraficznym. Został po raz pierwszy użyty w XV w. przez nieznanego drukarza do wypełnienia tekstem próbnej książki. Pięć wieków później zaczął być używany przemyśle elektronicznym, pozostając praktycznie niezmienionym. Spopularyzował się w latach 60. XX w. wraz z publikacją arkuszy Letrasetu, zawierających fragmenty Lorem Ipsum, a ostatnio z zawierającym różne wersje Lorem Ipsum oprogramowaniem przeznaczonym do realizacji druków na komputerach osobistych, jak Aldus PageMaker
+                  </Grid.Column>
+              </Grid.Row>
+
+              <Grid.Row>
+                  <Grid.Column width={3}>
+                      Lorem Ipsum jest tekstem stosowanym jako przykładowy wypełniacz w przemyśle poligraficznym. Został po raz pierwszy użyty w XV w. przez nieznanego drukarza do wypełnienia tekstem próbnej książki. Pięć wieków później zaczął być używany przemyśle elektronicznym, pozostając praktycznie niezmienionym. Spopularyzował się w latach 60. XX w. wraz z publikacją arkuszy Letrasetu, zawierających fragmenty Lorem Ipsum, a ostatnio z zawierającym różne wersje Lorem Ipsum oprogramowaniem przeznaczonym do realizacji druków na komputerach osobistych, jak Aldus PageMaker
+                  </Grid.Column>
+                  <Grid.Column width={10}>
+                      Lorem Ipsum jest tekstem stosowanym jako przykładowy wypełniacz w przemyśle poligraficznym. Został po raz pierwszy użyty w XV w. przez nieznanego drukarza do wypełnienia tekstem próbnej książki. Pięć wieków później zaczął być używany przemyśle elektronicznym, pozostając praktycznie niezmienionym. Spopularyzował się w latach 60. XX w. wraz z publikacją arkuszy Letrasetu, zawierających fragmenty Lorem Ipsum, a ostatnio z zawierającym różne wersje Lorem Ipsum oprogramowaniem przeznaczonym do realizacji druków na komputerach osobistych, jak Aldus PageMaker
+                  </Grid.Column>
+                  <Grid.Column width={3}>
+                      <Image src='/assets/images/wireframe/image.png' />
+                  </Grid.Column>
+              </Grid.Row>
+          </Grid>
+      </AppLayout>
     );
   }
 }

@@ -37,7 +37,7 @@ server
           : `<script src="${assets.client.js}" defer crossorigin></script>`}
     </head>
     <body>
-        <div id="root">${markup}</div>
+        <span id="root">${markup}</span>
     </body>
 </html>`
       );
