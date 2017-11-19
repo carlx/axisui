@@ -1,7 +1,7 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import styled from 'styled-components';
-import { Accordion, Icon } from 'semantic-ui-react'
-import { Input, Label, Menu, Item } from 'semantic-ui-react'
+import { Accordion, Icon } from 'semantic-ui-react';
+import { Input, Label, Menu, Item } from 'semantic-ui-react';
 
 const OverrideAccordian = styled(Accordion)`
   
@@ -36,20 +36,18 @@ const TitleIcon = styled.div`
 
 const OverrideAccordianTitle = styled(Accordion.Title)`
   &:hover {
-    background-color: red !important;
+    background-color: #00000008 !important;
   }
 `;
 
 const OverrideItemDescription = styled(Item.Description)`
-  &:hover {
-    background-color: red !important;
-  }
+  
 `;
 
 const OverrideItem = styled(Item)`
   padding: .75em 1em !important;
   &:hover {
-    background-color: red !important;
+    background-color: #00000008 !important;
   }
 `;
 
@@ -72,6 +70,19 @@ export default class AccordionExampleFluid extends Component {
     const { activeIndex } = this.state
 
     return (
+      <section>
+        <OverrideItem>
+          <OverrideItemDescription>
+            <TitleWrapper>
+              <TitleIcon>
+                <Icon name='search' />
+              </TitleIcon>
+              <Title>
+                Item 1
+              </Title>
+            </TitleWrapper>
+          </OverrideItemDescription>
+        </OverrideItem>
       <OverrideAccordian styled>
         <OverrideAccordianTitle active={activeIndex === 0} index={0} onClick={this.handleClick}>
           <TitleWrapper>
@@ -156,6 +167,7 @@ export default class AccordionExampleFluid extends Component {
           </OverrideItem>
         </OverrideAccordionContent>
       </OverrideAccordian>
+      </section>
     )
   }
 }
