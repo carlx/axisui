@@ -8,22 +8,18 @@ import DropdownImageTriggerExample from './DropdownImageTriggerExample';
 import TogglerButton from './TogglerButton';
 import { DESKTOP, MOBILE } from '../StyleUtils/style-utils';
 
-class AppHeader extends React.Component {
-  render() {
-    return (
-      <Header>
-        <AppLogo media={this.props.media} />
-        <TogglerButton media={this.props.media} toggle={this.props.toggle}>
-        </TogglerButton>
-        <Nav media={this.props.media}>
-          <NavItem>
-            <DropdownImageTriggerExample media={this.props.media}></DropdownImageTriggerExample>
-          </NavItem>
-        </Nav>
-      </Header>
-    );
-  }
-}
+const AppHeader = (props) => (
+  <Header>
+    <AppLogo media={props.media} />
+    <TogglerButton media={props.media} toggle={props.toggle}>
+    </TogglerButton>
+    <Nav media={props.media}>
+      <NavItem>
+        <DropdownImageTriggerExample media={props.media}></DropdownImageTriggerExample>
+      </NavItem>
+    </Nav>
+  </Header>
+);
 
 AppHeader.PropTypes = {
   toggle: PropTypes.func.isRequired,

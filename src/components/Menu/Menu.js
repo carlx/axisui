@@ -3,7 +3,7 @@ import MENU from './navigation';
 import Item from './Item';
 import ItemsContainer from './ItemsContainer';
 
-
+// todo add active menu item
 class Menu extends Component {
   constructor(props) {
     super(props);
@@ -18,7 +18,7 @@ class Menu extends Component {
   }
 
   renderChildren = (children) => children.map(
-    (item) => <Item title={item.name} key={item.id} icon={item.icon} />
+    (item) => <Item title={item.name} key={item.id} icon={item.icon} url={item.url} />
   )
 
   render() {
@@ -38,7 +38,7 @@ class Menu extends Component {
                 {this.renderChildren(item.children)}
               </ItemsContainer>);
             }
-            return <Item title={item.name} icon={item.icon} key={item.id} />;
+            return <Item title={item.name} icon={item.icon} key={item.id} url={item.url} />;
           })
         }
       </section>

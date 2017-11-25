@@ -7,7 +7,7 @@ const Toggler = styled.div`
   justify-content: center;
   color: white;
   flex: 0 1 30px;
-  ${props => togglerOrder(props.media)}
+  ${(props) => togglerOrder(props.media)}
 `;
 
 export default Toggler;

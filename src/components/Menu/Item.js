@@ -1,9 +1,11 @@
 import React from 'react';
+import PropType from 'prop-types';
+import { Link } from 'react-router-dom';
 import { Icon } from 'semantic-ui-react';
 import { TitleWrapper, Title, TitleIcon, MenuItem, MenuItemDescription } from '../MenuAccordion';
 
 const Item = (props) => (
-  <a href="#">
+  <Link to={props.url || ''}>
     <MenuItem>
       <MenuItemDescription>
         <TitleWrapper>
@@ -16,7 +18,13 @@ const Item = (props) => (
         </TitleWrapper>
       </MenuItemDescription>
     </MenuItem>
-  </a>
+  </Link>
 );
+
+Item.propTypes = {
+  url: PropType.string,
+  icon: PropType.string,
+  title: PropType.string,
+}
 
 export default Item;

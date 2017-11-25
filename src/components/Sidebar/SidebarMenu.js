@@ -4,7 +4,7 @@ import Sidebar from './Sidebar';
 import Menu from '../Menu/Menu';
 
 const SidebarMenu = (props) => (
-  <Sidebar isOpen={props.isOpen} id="sidebar">
+  <Sidebar isOpen={props.isOpen}>
     <Menu />
   </Sidebar>
 );

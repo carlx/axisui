@@ -5,7 +5,7 @@ const Nav = styled.div`
   display: flex;
   justify-content: flex-end; 
   flex-direction: row;
-  padding: 0px 20px 0px 0px;
+  padding: 0px 30px 0px 0px;
   order: 3;
   ${props => navWidth(props.media)}
 `;
