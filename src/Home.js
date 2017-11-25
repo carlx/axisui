@@ -1,32 +1,29 @@
 import React, { Component } from 'react';
 import './Home.css';
 import 'semantic-ui-css/semantic.min.css';
-import { Grid, Image } from 'semantic-ui-react';
+import { Grid, Image, Card, Icon } from 'semantic-ui-react';
+import faker from 'faker';
+faker.locale = 'pl';
 
 class Home extends Component {
   render() {
     return (
-      <Grid celled>
-        <Grid.Row>
-          <Grid.Column width={3}>
-                      Lorem Ipsum jest tekstem stosowanym jako przykładowy wypełniacz w przemyśle poligraficznym. Został po raz pierwszy użyty w XV w. przez nieznanego drukarza do wypełnienia tekstem próbnej książki. Pięć wieków później zaczął być używany przemyśle elektronicznym, pozostając praktycznie niezmienionym. Spopularyzował się w latach 60. XX w. wraz z publikacją arkuszy Letrasetu, zawierających fragmenty Lorem Ipsum, a ostatnio z zawierającym różne wersje Lorem Ipsum oprogramowaniem przeznaczonym do realizacji druków na komputerach osobistych, jak Aldus PageMaker
-          </Grid.Column>
-          <Grid.Column width={13}>
-                      Lorem Ipsum jest tekstem stosowanym jako przykładowy wypełniacz w przemyśle poligraficznym. Został po raz pierwszy użyty w XV w. przez nieznanego drukarza do wypełnienia tekstem próbnej książki. Pięć wieków później zaczął być używany przemyśle elektronicznym, pozostając praktycznie niezmienionym. Spopularyzował się w latach 60. XX w. wraz z publikacją arkuszy Letrasetu, zawierających fragmenty Lorem Ipsum, a ostatnio z zawierającym różne wersje Lorem Ipsum oprogramowaniem przeznaczonym do realizacji druków na komputerach osobistych, jak Aldus PageMaker
-          </Grid.Column>
-        </Grid.Row>
+      <Grid>
+        { new Array(2).fill({}).map((item, index) =>
+          <Grid.Row key={index}>
+            {new Array(1).fill({}).map((item, index) =>
+              <Grid.Column width={16} key={index}>
+                <Card fluid>
+                  <Card.Content>
+                    <Card.Header>{faker.lorem.sentence()}</Card.Header>
+                    <Card.Description>{faker.lorem.paragraphs(10)}</Card.Description>
+                  </Card.Content>
+                </Card>
+              </Grid.Column>)
+            }
+          </Grid.Row>)
+        }
 
-        <Grid.Row>
-          <Grid.Column width={3}>
-                      Lorem Ipsum jest tekstem stosowanym jako przykładowy wypełniacz w przemyśle poligraficznym. Został po raz pierwszy użyty w XV w. przez nieznanego drukarza do wypełnienia tekstem próbnej książki. Pięć wieków później zaczął być używany przemyśle elektronicznym, pozostając praktycznie niezmienionym. Spopularyzował się w latach 60. XX w. wraz z publikacją arkuszy Letrasetu, zawierających fragmenty Lorem Ipsum, a ostatnio z zawierającym różne wersje Lorem Ipsum oprogramowaniem przeznaczonym do realizacji druków na komputerach osobistych, jak Aldus PageMaker
-          </Grid.Column>
-          <Grid.Column width={10}>
-                      Lorem Ipsum jest tekstem stosowanym jako przykładowy wypełniacz w przemyśle poligraficznym. Został po raz pierwszy użyty w XV w. przez nieznanego drukarza do wypełnienia tekstem próbnej książki. Pięć wieków później zaczął być używany przemyśle elektronicznym, pozostając praktycznie niezmienionym. Spopularyzował się w latach 60. XX w. wraz z publikacją arkuszy Letrasetu, zawierających fragmenty Lorem Ipsum, a ostatnio z zawierającym różne wersje Lorem Ipsum oprogramowaniem przeznaczonym do realizacji druków na komputerach osobistych, jak Aldus PageMaker
-          </Grid.Column>
-          <Grid.Column width={3}>
-            <Image src="/assets/images/wireframe/image.png" />
-          </Grid.Column>
-        </Grid.Row>
       </Grid>
     );
   }

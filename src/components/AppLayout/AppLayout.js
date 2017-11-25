@@ -8,6 +8,7 @@ import MainContent from '../MainContent/MainContent';
 import ContainerFluid from '../ContainerFluid/ContainerFluid';
 import AppBreadcrumb from '../Breadcrumb/AppBreadcrumb';
 import { MOBILE, DESKTOP } from '../StyleUtils/style-utils';
+import { withRouter } from 'react-router-dom'
 
 
 class AppLayout extends React.Component {
@@ -58,7 +59,7 @@ class AppLayout extends React.Component {
   toggleSidebar = () => this.setState({ isSidebarOpen: !this.state.isSidebarOpen });
 
   render() {
-    console.log(this.state);
+    console.log(this.props);
     console.log('render app layout');
     return (
       <Wrapper>
@@ -71,7 +72,7 @@ class AppLayout extends React.Component {
         <BodyWrapper>
           <SidebarMenu isOpen={this.state.isSidebarOpen} />
           <MainContent isOpen={this.state.isSidebarOpen}>
-            <AppBreadcrumb />
+            <AppBreadcrumb routes={this.props.routes} location={this.props.location} />
             <ContainerFluid fluid>
               {this.props.children}
             </ContainerFluid>
@@ -86,4 +87,4 @@ AppLayout.PropTypes = {
   children: PropTypes.node,
 };
 
-export default AppLayout;
+export default withRouter(AppLayout);

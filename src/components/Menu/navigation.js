@@ -3,13 +3,14 @@ const MENU = {
     {
       id: 1,
       name: 'Group 1',
-      url: '/users',
+      url: '/home',
       icon: 'user',
       roles: ['ROLE_ADMIN'],
       check: true,
       children: [
         {
           id: 11,
+          url: '/home',
           name: 'Group Item 1',
           class: '',
           roles: ['ROLE_ADMIN', 'ROLE_CC'],
@@ -18,7 +19,7 @@ const MENU = {
         {
           id: 12,
           name: 'Group Item 2',
-          url: '/expactocc',
+          url: '/home',
           icon: 'user',
           roles: ['ROLE_ADMIN', 'ROLE_CC'],
           check: true,

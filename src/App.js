@@ -6,11 +6,43 @@ import News from './News';
 import AppLayout from './components/AppLayout/AppLayout';
 import './App.css';
 
+const routes = [
+  {
+    exact: false,
+    component: Home,
+    name: 'Strona domowa',
+    path: '/',
+  },
+  {
+    exact: false,
+    component: Home,
+    name: 'Home',
+    path: '/home',
+  },
+  {
+    exact: false,
+    component: Home,
+    name: 'Testy',
+    path: '/home/test',
+  },
+  {
+    exact: true,
+    component: News,
+    name: 'Nowosci',
+    path: '/news',
+  },
+  {
+    exact: true,
+    component: News,
+    name: 'Nowosci2',
+    path: '/news/:userId',
+  },
+];
+
 const App = () => (
-  <AppLayout>
+  <AppLayout routes={routes}>
     <Switch>
-      <Route exact path="/" component={Home} />
-      <Route exact path="/news" component={News} />
+      {routes.map((route) => <Route key={route.path} exact={route.exact} path={route.path} component={route.component} />)}
     </Switch>
   </AppLayout>
 );
